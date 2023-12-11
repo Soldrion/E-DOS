@@ -1,8 +1,5 @@
 import VHD_Folder
-from VHD_Folder import config_user.py
-name = "Virtual Hard Disk 1"
-max_size = 20.00
-contents = {
-    
-    }
-}
+from VHD_Folder import config_user
+from VHD_Folder import VHD_config
+current_vhd = config_user.contents
+vhd_config = VHD_config.contents
