@@ -1,6 +1,8 @@
 # E-DOS Crimson
 An emulation of a DOS on CodeHS
 
+**Crimson is never to be pushed into main.**
+
 
 
 big thanks to imlvna for being big help / contributor
@@ -17,10 +19,10 @@ A: I wanted to have something fun and challenging to do while I was bored.
 
 **What commands can E-DOS run?**
 
-
-
 A: It can use the ls and cd commands, as well as a few custom ones. We are working on making pretty much all standard linux commands usable and making a "working" VHD.
 
 **Can I connect to The Internet with E-DOS?**
 
 A: No, not in its' current state. It is a custom-made emulation of an emulation of a linux terminal from scratch. This version of E-DOS is likely not going to connect to the intenet, it is an embed/localhost-page only version.
+
+
