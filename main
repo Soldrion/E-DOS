@@ -1,3 +1,4 @@
+from brython_graphics import *
 from browser import timer
 cursor = Rectangle(10, 20)
 screen = []
