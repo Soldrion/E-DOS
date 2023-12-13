@@ -10,7 +10,7 @@ big thanks to imlvna for being big help / contributor
 
 **Why make this?**
 
-A: 
+A: fun
 
 
 **What commands can E-DOS run?**
