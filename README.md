@@ -1,5 +1,7 @@
-# E-DOS
+# E-DOS BETA 
 An emulation of a DOS on CodeHS
+
+This branch is used to push features and such before the main branch
 
 
 
