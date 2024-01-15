@@ -1,6 +1,8 @@
-# E-DOS
+# E-DOS BETA 
 An emulation of a DOS on CodeHS
-Not necessarily a full emulation, rather a simulation of one.
+
+This branch is used to push features and such before the main branch
+
 
 
 big thanks to imlvna for being big help / contributor
@@ -8,8 +10,7 @@ big thanks to imlvna for being big help / contributor
 
 **Why make this?**
 
-A: fun
-
+A: funsies
 
 **What commands can E-DOS run?**
 
