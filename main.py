@@ -29,12 +29,12 @@ dir_usr_include = []
 dir_usr_sbin = []
 dir_usr = ["/usr",dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
 global accepted_directories
-directories = [dir_home,dir_lib,dir_bin,dir_tmp,dir_etc,dir_root,dir_mnt,dir_boot,dir_opt,dir_usr]
+directories = [dir_home[0],dir_lib[0],dir_bin[0],dir_tmp[0],dir_etc[0],dir_root[0],dir_mnt[0],dir_boot[0],dir_opt[0],dir_usr[0]]
 accepted_directories = [dir_home,dir_lib,dir_bin,dir_tmp,dir_etc,dir_root,dir_mnt,dir_boot,dir_opt,dir_usr,dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
 
 
 flash_cursor_bool = False
-command_list = ["ls","cd","pwd","mkdir","grep","exit","head","less","mv","sudo","tail","clear","dos_fdisk","dos_type","dos_edit","print"]
+command_list = ["ls","cd","pwd","mkdir","grep","exit","head","less","mv","sudo","tail","clear","dos_fdisk","dos_type","dos_edit","print","dir"]
 
 
 screen_lines = ["Welcome to E-DOS","Kernel Version:"+kernel_info,"Storage Devices:"+str(storage_devices)]
@@ -107,24 +107,64 @@ def input_handler(e):
         # Control, Shift, CapsLock, Tab, `, Escape, Backspace, Enter, Alt 
 
 def cmd_processor(cmd):
-    global current_directory  # Declare current_directory as a global variable
+    global current_directory  
     comb_line = username + "@" + hostname + current_directory+":" + command
     screen_lines.append(comb_line)
     cmd_split = cmd.split(' ')
     if cmd == "dos_fdisk":
         screen_lines.append("the disk is f")
-
+    items = []
     if cmd == "ls":
-        screen_lines.append(directories)
-
+        screen_lines.append(" ")
+        for i in range(0,len(directories)):
+            item = directories[i] 
+            items.append(item)
+            if i == 8:
+                items.append(" ")
+                screen_lines.append(items)
+                items = []
+                screen_lines.append(items)
+            if i == 16:
+                items.append(" ")
+                screen_lines.append(items)
+                items = []
+                screen_lines.append(items)
+        screen_lines.append(" ")
     if cmd == "neofetch":
         screen_lines.append("package 'neofetch' not available")
 
     if cmd == "dir":
         screen_lines.append(directories)
+        
+    if cmd_split[0] == "man":
+        items = []
+        screen_lines.append(" ")
+        screen_lines.append("MANUAL")
+        screen_lines.append(" ")
+        screen_lines.append("Commands:")
+        for i in range(len(command_list)):
+            item = command_list[i] 
+            items.append(item)
+            if i == 10:
+                items.append(" ")
+                screen_lines.append(items)
+                items = []
+                screen_lines.append(items)
+                screen_lines.append(" ")
+        screen_lines.append("Documentation:")
+        screen_lines.append(" ")
+        screen_lines.append("When in directories other than hostname@username,")
+        screen_lines.append("The color of all text will be a different color.")
+        screen_lines.append(" ")
+        screen_lines.append("To use MS-DOS commands, use the 'dos_' prefix.")
+        screen_lines.append(" ")
 
+        
     if cmd_split[0] == "cd":
         target_directory = cmd_split[1]
+        if cmd_split[1] == None:
+            screeen_lines.append(cmd)
+             
         found_directory = None
         for directory_list in accepted_directories:
             for directory in directory_list:
