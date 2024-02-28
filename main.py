@@ -103,8 +103,7 @@ def input_handler(e):
         command = command[:-1] 
     if e.key == "Enter":
         cmd_processor(command)
-        command = command[:command] 
-        
+        command = command[:-9999]         
         
         
         # Control, Shift, CapsLock, Tab, `, Escape, Backspace, Enter, Alt 
