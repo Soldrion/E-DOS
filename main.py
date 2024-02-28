@@ -1,3 +1,5 @@
+#remember to add the login system
+
 from brython_graphics import *
 from browser import timer
 cursor = Rectangle(10, 20)
@@ -13,6 +15,7 @@ kernel_info = "0.0.1"
 dosmode = False
 global current_directory
 current_directory = ""
+
 #DIRECTORIES
 dir_home = ["/home","sussy","baka"]
 dir_lib = ["/lib"]
@@ -94,13 +97,13 @@ def input_handler(e):
     global command
     global flash_cursor_bool
     flash_cursor_bool = True
-    if e.key not in ["ArrowLeft", "ArrowRight", "ArrowDown", "ArrowUp", "Control", "Alt", "Enter", "CapsLock", "Tab", "Shift","Backspace", "Meta"]:
+    if e.key not in ["ArrowLeft", "ArrowRight", "ArrowDown", "ArrowUp", "Control", "Alt", "Enter", "CapsLock", "Tab", "Shift","Backspace", "Meta","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"]:
         command += str(e.key)
     if e.key == "Backspace":
         command = command[:-1] 
     if e.key == "Enter":
         cmd_processor(command)
-        command = command[:-9999] 
+        command = command[:command] 
         
         
         
@@ -135,7 +138,9 @@ def cmd_processor(cmd):
 
     if cmd == "dir":
         screen_lines.append(directories)
-        
+    if cmd == "fwd":
+        print()
+    
     if cmd_split[0] == "man":
         items = []
         screen_lines.append(" ")
