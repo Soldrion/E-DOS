@@ -121,12 +121,12 @@ def cmd_processor(cmd):
         for i in range(0,len(directories)):
             item = directories[i] 
             items.append(item)
-            if i == 8:
+            if i == 14:
                 items.append(" ")
                 screen_lines.append(items)
                 items = []
                 screen_lines.append(items)
-            if i == 16:
+            if i == 34:
                 items.append(" ")
                 screen_lines.append(items)
                 items = []
