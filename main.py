@@ -14,7 +14,7 @@ storage_devices = [None]
 kernel_info = "0.0.1"
 dosmode = False
 global current_directory
-
+current_directory = ""
 
 #DIRECTORIES
 dir_home = ["/home","sussy","baka"]
@@ -32,10 +32,9 @@ dir_usr_include = []
 dir_usr_sbin = []
 dir_usr = ["/usr",dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
 global accepted_directories
-global directories 
 directories = [dir_home[0],dir_lib[0],dir_bin[0],dir_tmp[0],dir_etc[0],dir_root[0],dir_mnt[0],dir_boot[0],dir_opt[0],dir_usr[0]]
 accepted_directories = [dir_home,dir_lib,dir_bin,dir_tmp,dir_etc,dir_root,dir_mnt,dir_boot,dir_opt,dir_usr,dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
-current_directory = directories
+
 
 flash_cursor_bool = False
 command_list = ["ls","cd","pwd","mkdir","grep","exit","head","less","mv","sudo","tail","clear","dos_fdisk","dos_type","dos_edit","print","dir"]
@@ -119,8 +118,8 @@ def cmd_processor(cmd):
     items = []
     if cmd == "ls":
         screen_lines.append(" ")
-        for i in range(0,len(current_directory)):
-            item = current_directory[i] 
+        for i in range(0,len(directories)):
+            item = directories[i] 
             items.append(item)
             if i == 14:
                 items.append(" ")
