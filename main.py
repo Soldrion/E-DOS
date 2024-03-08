@@ -117,7 +117,6 @@ def cmd_processor(cmd):
         if cmd_split[1] == "dos_fdisk":
             screen_lines.append("the disk is f")
         if cmd_split[1] == "ls":
-            screen_lines.append(" ")
             for i in range(0,len(directories)):
                 item = directories[i] 
                 items.append(item)
