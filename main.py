@@ -176,14 +176,8 @@ def cmd_processor(cmd):
         else:
             screen_lines.append(f"Directory '{target_directory}' not found")
 
-    if cmd_split[0] == "print":
-        if cmd_split[1] == "accepted_directories":
-            screen_lines.append(accepted_directories)
-        elif cmd_split[1] == "cd":
-            screen_lines.append(current_directory)
-        else:
-            screen_lines.append(cmd_split[1])
-    if cmd_split[0] not in command_list:
+    
+    if cmd_split[0] not in command_list and cmd_split[0] not "sudo":
         screen_lines.append("Command not found.")
         return
 
