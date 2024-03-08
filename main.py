@@ -114,7 +114,7 @@ def cmd_processor(cmd):
     screen_lines.append(comb_line)
     cmd_split = cmd.split(' ')
     if cmd_split[0] == "sudo":
-        if cmd_split[1] == "dos_fdisk"
+        if cmd_split[1] == "dos_fdisk":
             screen_lines.append("the disk is f")
         if cmd_split[1] == "ls":
             screen_lines.append(" ")
