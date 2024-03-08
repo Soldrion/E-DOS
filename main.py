@@ -113,6 +113,21 @@ def cmd_processor(cmd):
     comb_line = username + "@" + hostname + current_directory+":" + command
     screen_lines.append(comb_line)
     cmd_split = cmd.split(' ')
+    if cmd_split[0] == "sudo":
+        if cmd_split[1] == "dos_fdisk":
+            screen_lines.append("the disk is f")
+        if cmd_split[1] == "ls":
+            if cmd == "ls":
+            screen_lines.append(" ")
+            for i in range(0,len(directories)):
+                item = directories[i] 
+                items.append(item)
+                if i % 9 == 0:
+                    items.append(" ")
+                    screen_lines.append(items)
+                    items = []
+
+        screen_lines.append(" ")
     if cmd == "dos_fdisk":
         screen_lines.append("the disk is f")
     items = []
