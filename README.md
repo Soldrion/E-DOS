@@ -1,4 +1,8 @@
 # E-DOS
+
+This is a useless, silly little project that I made for fun in sophomore year of HS. It is only meant to look like a terminal.
+
+
 An emulation of a DOS on CodeHS
 Not necessarily a full emulation, rather a simulation of one.
 
