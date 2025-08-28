@@ -6,10 +6,10 @@ textlist = []
 x = 0
 boole = [True] 
 username = "user"
-hostname = "EDOSPC"
+hostname = "EDOS"
 command = ""
 storage_devices = [None]
-kernel_info = "0.0.1"
+kernel_info = "0.0.2"
 dosmode = False
 global current_directory
 current_directory = ""
