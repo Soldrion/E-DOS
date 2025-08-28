@@ -5,8 +5,8 @@ screen = []
 textlist = []
 x = 0
 boole = [True] 
-username = "chudbobsquarepants"
-hostname = "EdPC"
+username = "user"
+hostname = "EDOSPC"
 command = ""
 storage_devices = [None]
 kernel_info = "0.0.1"
@@ -14,6 +14,7 @@ dosmode = False
 global current_directory
 current_directory = ""
 #DIRECTORIES
+dir_root = ["/"]
 dir_home = ["/home"]
 dir_lib = ["/lib"]
 dir_bin = ["/bin"]
