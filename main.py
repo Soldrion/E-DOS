@@ -14,13 +14,12 @@ dosmode = False
 global current_directory
 current_directory = ""
 #DIRECTORIES
-dir_root = ["/"]
 dir_home = ["/home"]
 dir_lib = ["/lib"]
 dir_bin = ["/bin"]
 dir_tmp = ["/tmp"]
 dir_etc = ["/etc"]
-dir_root = ["/root"]
+dir_root = ["/"]
 dir_mnt = ["/mnt"]
 dir_boot = ["/boot"]
 dir_opt = ["/opt"]
@@ -30,8 +29,8 @@ dir_usr_include = []
 dir_usr_sbin = []
 dir_usr = ["/usr",dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
 global accepted_directories
-directories = [dir_root[0],dir_home[0],dir_lib[0],dir_bin[0],dir_tmp[0],dir_etc[0],dir_root[0],dir_mnt[0],dir_boot[0],dir_opt[0],dir_usr[0]]
-accepted_directories = [dir_root[0],dir_home,dir_lib,dir_bin,dir_tmp,dir_etc,dir_root,dir_mnt,dir_boot,dir_opt,dir_usr,dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
+directories = [dir_root[0],dir_home[0],dir_lib[0],dir_bin[0],dir_tmp[0],dir_etc[0],dir_mnt[0],dir_boot[0],dir_opt[0],dir_usr[0]]
+accepted_directories = [dir_root,dir_home,dir_lib,dir_bin,dir_tmp,dir_etc,dir_mnt,dir_boot,dir_opt,dir_usr,dir_usr_bin,dir_usr_local,dir_usr_include,dir_usr_sbin]
 
 
 flash_cursor_bool = False
